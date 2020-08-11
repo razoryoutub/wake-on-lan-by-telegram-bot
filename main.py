@@ -12,7 +12,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['wake'])
 async def wake_by_massage(message: types.Message):
 	if message.from_user.id == 214196761:
-		send_magic_packet(mac)
+		send_magic_packet(mac, ip_address = 192.168.0.100)
 		await message.answer('Разбудил ' + mac)
 	else:
 		await message.answer('Ты не мой повелитель УХАДИ!!')
